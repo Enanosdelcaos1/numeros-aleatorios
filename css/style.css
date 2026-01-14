@@ -107,6 +107,34 @@ span:hover {
     background-color: #7744dd;
 }
 
+/* Estilos del botón para generar nuevos números */
+.btn-generar {
+    margin-top: 20px;
+    padding: 12px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #FF9800;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Efecto hover del botón */
+.btn-generar:hover {
+    background-color: #E68900;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Efecto activo del botón (cuando se presiona) */
+.btn-generar:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
 /* ========================================
    MEDIA QUERIES - RESPONSIVE DESIGN
    Adapta el diseño a diferentes tamaños de pantalla

@@ -10,16 +10,16 @@ function generarNumeroAleatorio() {
 }
 
 // Variables globales que almacenan los dos números para las operaciones
-let numero1 = generarNumeroAleatorio();
-let numero2 = generarNumeroAleatorio();
+let aleatorioIzq = generarNumeroAleatorio();
+let aleatorioDer = generarNumeroAleatorio();
 
 /* ========================================
    FUNCIÓN: Mostrar números en los círculos
    Actualiza el contenido HTML de los elementos numero1 y numero2
    ======================================== */
 function mostrarNumeros() {
-    document.getElementById('numero1').textContent = numero1;
-    document.getElementById('numero2').textContent = numero2;
+    document.getElementById('numero1').textContent = aleatorioIzq;
+    document.getElementById('numero2').textContent = aleatorioDer;
 }
 
 /* ========================================
@@ -29,27 +29,27 @@ function mostrarNumeros() {
    ======================================== */
 function calcularResultados() {
     // Suma: numero1 + numero2
-    const suma = numero1 + numero2;
+    const suma = aleatorioIzq + aleatorioDer;
     document.getElementById('resultSuma').textContent = suma;
 
     // Resta: numero1 - numero2
-    const resta = numero1 - numero2;
+    const resta = aleatorioIzq - aleatorioDer;
     document.getElementById('resultResta').textContent = resta;
 
     // Multiplicación: numero1 * numero2
-    const multiplicacion = numero1 * numero2;
+    const multiplicacion = aleatorioIzq * aleatorioDer;
     document.getElementById('resultMultiplicacion').textContent = multiplicacion;
 
     // División: numero1 / numero2 (si numero2 no es 0)
-    const division = numero2 !== 0 ? (numero1 / numero2).toFixed(2) : 'Error';
+    const division = aleatorioDer !== 0 ? (aleatorioIzq / aleatorioDer).toFixed(2) : 'Error';
     document.getElementById('resultDivision').textContent = division;
 
     // Porcentaje: qué porcentaje es numero1 de numero2
-    const porcentaje = (numero1 * numero2 / 100).toFixed(2);
+    const porcentaje = (aleatorioIzq * aleatorioDer / 100).toFixed(2);
     document.getElementById('resultPorcentaje').textContent = porcentaje;
 
     // Raíz cuadrada: raíz cuadrada del promedio de los dos números
-    const promedio = (numero1 + numero2) / 2;
+    const promedio = (aleatorioIzq + aleatorioDer) / 2;
     const raizCuadrada = Math.sqrt(promedio).toFixed(2);
     document.getElementById('resultRaizCuadrada').textContent = raizCuadrada;
 }
@@ -60,3 +60,14 @@ function calcularResultados() {
    ======================================== */
 mostrarNumeros();
 calcularResultados();
+
+/* ========================================
+   EVENTO DEL BOTÓN GENERAR
+   Al hacer click, genera nuevos números sin refrescar
+   ======================================== */
+document.getElementById('btnGenerar').addEventListener('click', function() {
+    aleatorioIzq = generarNumeroAleatorio();
+    aleatorioDer = generarNumeroAleatorio();
+    mostrarNumeros();
+    calcularResultados();
+});
