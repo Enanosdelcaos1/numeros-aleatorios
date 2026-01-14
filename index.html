@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calcu</title>
+      <!-- Enlace al archivo CSS externo para los estilos -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <h1>Numeros aleatorios</h1>
+    
+    <!-- Sección para los dos números aleatorios mostrados en círculos -->
+    <section class="contenedor-numeros">
+        <div class="numero-circulo" id="numero1">0</div>
+        <div class="numero-circulo" id="numero2">0</div>
+    </section>
+
+    <!-- Sección para todos los botones de operaciones -->
+    <section class="contenedor-botones">
+        <div class="fila-botones">
+            <!-- Operación SUMA -->
+            <section class="boton-grupo">
+                <span class="resultado-operacion" id="resultSuma">0</span>
+                <span>+</span>
+            </section>
+
+            <!-- Operación RESTA -->
+            <section class="boton-grupo">
+                <span class="resultado-operacion" id="resultResta">0</span>
+                <span>-</span>
+            </section>
+
+            <!-- Operación MULTIPLICACIÓN -->
+            <section class="boton-grupo">
+                <span class="resultado-operacion" id="resultMultiplicacion">0</span>
+                <span>*</span>
+            </section>
+
+            <!-- Operación DIVISIÓN -->
+            <section class="boton-grupo">
+                <span class="resultado-operacion" id="resultDivision">0</span>
+                <span>/</span>
+            </section>
+
+            <!-- Operación PORCENTAJE -->
+            <section class="boton-grupo">
+                <span class="resultado-operacion" id="resultPorcentaje">0</span>
+                <span>%</span>
+            </section>
+
+            <!-- Operación RAÍZ CUADRADA -->
+            <section class="boton-grupo">
+                <span class="resultado-operacion" id="resultRaizCuadrada">0</span>
+                <span>√</span>
+            </section>
+        </div>
+    </section>
+
+    <!-- Script JavaScript: contiene toda la lógica de la calculadora -->
+    <!-- La ruta "../js/calculadora.js" indica que el archivo está en la carpeta js/ -->
+    <script src="js/calculadora.js"></script>
+</body>
+</html>
